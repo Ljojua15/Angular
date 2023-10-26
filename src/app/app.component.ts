@@ -8,12 +8,20 @@ import { Course } from './module/course';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  angularCourses: Course = COURSES[0];
+  angularCourses = COURSES[0];
 
   rxjsCourses = COURSES[1];
 
   ngrxCourses = COURSES[2];
+
+
+  clickAndSelect(test:Course){
+    console.log('იმედია გამოვა', test)
+
+
+  }
+
   ngOnInit(): void {
-    console.log(this.angularCourses);
+
   }
 }

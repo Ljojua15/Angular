@@ -1,13 +1,12 @@
-
 <div class="container">
 
 
 
-<app-course-card [test]="angularCourses"></app-course-card>
+    <app-course-card (selectCourse)="clickAndSelect($event)" [test]="angularCourses"></app-course-card>
 
-<!-- <app-course-card [test]=" rxjsCourses"></app-course-card>
+    <app-course-card [test]=" rxjsCourses"></app-course-card>
 
-<app-course-card [test]="ngrxCourses"></app-course-card> -->
+    <app-course-card [test]="ngrxCourses"></app-course-card>
 
 
 </div>
