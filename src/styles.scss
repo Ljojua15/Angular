@@ -1,6 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
 .is-Even{
-  border-top: 5px solid rgb(218, 178, 178);
-  padding-top: 20px;
-  background: red;
-}
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    --border-size: 3px;
+    --border-angle: 0turn;
+    width: 420px;
+    height: 470px;
+    background-image: conic-gradient(
+        from var(--border-angle),
+        #213,
+        #112 50%,
+        #213
+      ),
+      conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+    background-size: calc(100% - (var(--border-size) * 2))
+        calc(100% - (var(--border-size) * 2)),
+      cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    animation: bg-spin 3s linear infinite;
+    @keyframes bg-spin {
+      to {
+        --border-angle: 1turn;
+      }
+    }
+
+    &:hover {
+      animation: bg-spin 0.5s linear infinite;
+    }
+  }
+
+  @property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+  }
+
+
