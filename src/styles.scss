@@ -7,11 +7,12 @@
     --border-angle: 0turn;
     width: 420px;
     height: 470px;
+
     background-image: conic-gradient(
         from var(--border-angle),
-        #213,
-        #112 50%,
-        #213
+        antiquewhite,
+        antiquewhite 50%,
+        antiquewhite
       ),
       conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
     background-size: calc(100% - (var(--border-size) * 2))
@@ -28,7 +29,7 @@
     }
 
     &:hover {
-      animation: bg-spin 0.5s linear infinite;
+      animation: bg-spin 1s linear infinite;
     }
   }
 
