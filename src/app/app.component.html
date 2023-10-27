@@ -1,12 +1,6 @@
 <div class="container">
-
-
-
-    <app-course-card (selectCourse)="clickAndSelect($event)" [test]="angularCourses"></app-course-card>
-
-    <app-course-card [test]=" rxjsCourses"></app-course-card>
-
-    <app-course-card [test]="ngrxCourses"></app-course-card>
-
-
+  <app-course-card *ngFor="let courses of course; index as i; even as isEven;"
+    [class.is-Even]="isEven"
+    (selectCourse)="toSelect($event)"
+    [test]="courses" [placeNumber]="i+1"></app-course-card>
 </div>

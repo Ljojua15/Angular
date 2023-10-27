@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CourseCardComponent } from './course-card/course-card.component';
+import { AnimationComponent } from './animation/animation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CourseCardComponent
+    CourseCardComponent,
+    AnimationComponent
   ],
   imports: [
     BrowserModule,
