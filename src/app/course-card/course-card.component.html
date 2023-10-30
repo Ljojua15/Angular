@@ -1,7 +1,34 @@
-<div class="main  is-Even"  >
-  <p>{{placeNumber + "" +test.description}}</p>
-  <img [src]="test.iconUrl" alt="">
-  <span>{{test.longDescription}}</span>
+<div class="main  is-Even" *ngIf="test"
+[ngClass]="{'begginer': isBeginner}" >
+
+
+  <p *ngIf="satauri()">{{placeNumber || '' + "" +test.description}} </p>
+
+
+
+  <img [src]="test.iconUrl" alt="" *ngIf="chveneba(); else noimage">
+
+  <ng-template #noimage  >
+    <p> We Dont have Image </p>
+
+  </ng-template>
+
+  <span *ngIf="agwera()">{{test.longDescription}}</span>
+
+  <ng-container [ngSwitch]="test.category" >
+    <div class="course-category">
+
+      <div class="category" *ngSwitchCase="'BEGINNER'" > {{"begginer" | uppercase}} </div>
+
+      <div class="category" *ngSwitchCase="'INTERMEDIATE'"> intermediate </div>
+
+      <div class="category" *ngSwitchCase="'ADVANCED'"> advanced  </div>
+    </div>
+  </ng-container>
+
+
+
+
   <button class="button button-2" (click)="seeMore()">გაიგე მეტი</button>
 </div>
 

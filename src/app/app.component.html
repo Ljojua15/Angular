@@ -1,8 +1,21 @@
+<ng-container  >
+  {{startDate | date}}
+
+  <div>{{title | lowercase}}</div>
+
+</ng-container>
+
 <div class="container">
-  <app-course-card *ngFor="let courses of course; index as i; even as isEven;"
+  <app-course-card
 
     (selectCourse)="toSelect($event)"
-    [test]="courses" [placeNumber]="i+1"></app-course-card>
+    [test]="course[1]" >
+  </app-course-card>
+  <app-course-card
+
+  (selectCourse)="toSelect($event)"
+  [test]="course[4]" >
+</app-course-card>
 </div>
 
 <!--
