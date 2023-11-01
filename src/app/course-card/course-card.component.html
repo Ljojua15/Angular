@@ -1,12 +1,12 @@
-<div class="main  is-Even" *ngIf="test"
-[ngClass]="{'begginer': isBeginner}" >
+<div class="main  is-Even" *ngIf="test">
+  <!-- [ngClass]="{'begginer': isBeginner}"  -->
 
 
-  <p *ngIf="satauri()">{{placeNumber || '' + "" +test.description}} </p>
+  <p *ngIf="satauri()"> 1 {{placeNumber || '' + "" +test.description}} </p>
 
 
 
-  <img [src]="test.iconUrl" alt="" *ngIf="chveneba(); else noimage">
+  <img #imageTest [src]="test.iconUrl" alt="" *ngIf="chveneba(); else noimage">
 
   <ng-template #noimage  >
     <p> We Dont have Image </p>

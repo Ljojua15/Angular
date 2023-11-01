@@ -13,7 +13,7 @@ export class CourseCardComponent implements OnInit {
   selectCourse = new EventEmitter<Course>();
   isBeginner = false;
   ngOnInit(): void {
-    this.isBeginner = this.test.category === 'BEGINNER';
+    // this.isBeginner = this.test.category === 'BEGINNER';
   }
   chveneba() {
     return this.test && this.test.iconUrl;
