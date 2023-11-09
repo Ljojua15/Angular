@@ -6,3 +6,9 @@ export interface Course {
   category: string;
   lessonsCount: number;
 }
+export interface chests {
+  closeimg: string;
+  openimg: string;
+  top: string;
+  left: string;
+}
